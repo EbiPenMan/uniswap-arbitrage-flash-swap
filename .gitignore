@@ -5,9 +5,10 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore build files.
-.env
+
 node_modules/*
 build/contracts/*
 test/
 test/*
 log_arbitrage.txt
+.idea
