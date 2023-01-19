@@ -41,7 +41,7 @@ const web3 = new Web3(
 const { address: admin } = web3.eth.accounts.wallet.add(process.env.PRIVATE_KEY);
 
 const prices = {};
-const flashswap = new web3.eth.Contract(FlashswapApi, FLASHSWAP_CONTRACT);
+// const flashswap = new web3.eth.Contract(FlashswapApi, FLASHSWAP_CONTRACT);
 
 
 let trxCount = 0;
@@ -55,7 +55,7 @@ const init = async () => {
 
     let nonce = await web3.eth.getTransactionCount(admin);
     let gasPrice = await web3.eth.getGasPrice();
-    console.log(`started: wallet ${admin} - gasPrice ${gasPrice}`);
+    console.log(`started: wallet ${admin} - nonce: ${nonce} - gasPrice ${gasPrice}`);
 
     setInterval(async () => {
         nonce = await web3.eth.getTransactionCount(admin);
@@ -65,9 +65,7 @@ const init = async () => {
     //     gasPrice = await web3.eth.getGasPrice()
     // }, 1000 * 60 * 3);
 
-    const owner = await flashswap.methods.owner().call();
-
-    console.log(`started: wallet ${admin} - gasPrice ${gasPrice} - contract owner: ${owner}`);
+    // const owner = await flashswap.methods.owner().call();
 
     let handler = async () => {
         const myPrices = await Prices.getPrices();

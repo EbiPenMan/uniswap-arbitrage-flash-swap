@@ -3,6 +3,15 @@
     {
         "pairAddress": "0xfcc860289819c8b754ef31a1709a7952EB940223",
         "mainReserveSymbol": "Cake",
-        "pair": "Cake-ARENA"
+        "pair": "Cake-ARENA",
+        "active": false,
+        "blockchain" : "bsc"
+    },
+    {
+        "pairAddress": "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
+        "mainReserveSymbol": "DAI",
+        "pair": "DAI-WETH",
+        "active": true,
+        "blockchain" : "eth"
     }
 ]

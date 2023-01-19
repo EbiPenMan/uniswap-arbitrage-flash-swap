@@ -15,6 +15,10 @@ module.exports.main = async (provider) => {
 
 
     for (let i = 0; i < pairsInfo.length; i++){
+
+        if(!pairsInfo[i].active)
+            continue;
+
         const pairInfo = pairsInfo[i];
 
         // load contract pair uniswap
@@ -68,6 +72,8 @@ module.exports.main = async (provider) => {
             tokenBSymbol = token0Symbol;
         }
         console.log("--------------------------------------------------------------");
+        console.log(`tokenASymbol: ${tokenASymbol} -> tokenAReserve ${tokenAReserve}`);
+        console.log(`tokenBSymbol: ${tokenBSymbol} -> tokenBReserve ${tokenBReserve}`);
 
         const amountIn = Scalar.pow(10, tokenADecimals);
         const amountOut = uniswapLib.getAmountOut(amountIn, tokenAReserve, tokenBReserve);
