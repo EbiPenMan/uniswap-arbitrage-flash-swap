@@ -11,7 +11,14 @@
         "pairAddress": "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
         "mainReserveSymbol": "DAI",
         "pair": "DAI-WETH",
-        "active": true,
+        "active": false,
         "blockchain" : "eth"
+    },
+    {
+        "pairAddress": "0xacaac9311b0096e04dfe96b6d87dec867d3883dc",
+        "mainReserveSymbol": "WBNB",
+        "pair": "WBNB-BUSD",
+        "active": true,
+        "blockchain" : "bsc"
     }
 ]

@@ -138,10 +138,10 @@ module.exports.getPairs = async () => {
         }
     }
 
-    const pairsPre = await getPairPre(dex_Bsc);
+    // const pairsPre = await getPairPre(dex_Bsc);
 
 
-    return pairsPre;
+    return pairs;
 }
 
 const getPairPre = async function (dex) {
